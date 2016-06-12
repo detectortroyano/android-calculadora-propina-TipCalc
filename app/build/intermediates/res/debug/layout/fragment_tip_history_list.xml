@@ -3,9 +3,10 @@
     android:layout_height="match_parent"
     tools:context="edu.detectortroyano.com.tipcalc.fragments.TipHistoryListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reciclerView"/>
 
 </FrameLayout>
 <!-- From: file:/C:/Users/detectortroyano/AndroidStudioProjects/TipCalc/app/src/main/res/layout/fragment_tip_history_list.xml -->
