@@ -1,6 +1,7 @@
 package edu.detectortroyano.com.tipcalc.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import edu.detectortroyano.com.tipcalc.R;
+import edu.detectortroyano.com.tipcalc.activities.TipDetailActivity;
 import edu.detectortroyano.com.tipcalc.adapters.OnItemClickListener;
 import edu.detectortroyano.com.tipcalc.adapters.TipAdapter;
 import edu.detectortroyano.com.tipcalc.models.TipRecord;
@@ -73,7 +75,12 @@ public class TipHistoryListFragment extends Fragment implements TipHistoryListFr
 
     @Override
     public void onItemClick(TipRecord tipRecord) {
-        Toast.makeText(getActivity(), tipRecord.getDateFormatted(), Toast.LENGTH_SHORT).show();
-        Log.e(this.getClass().getName(), tipRecord.getDateFormatted());
+        //Toast.makeText(getActivity(), tipRecord.getDateFormatted(), Toast.LENGTH_SHORT).show();
+        //Log.e(this.getClass().getName(), tipRecord.getDateFormatted());
+        Intent intent = new Intent(getActivity(), TipDetailActivity.class);
+        intent.putExtra(TipDetailActivity.TIP_KEY, tipRecord.getTip());
+        intent.putExtra(TipDetailActivity.BILL_TOTAL_KEY, tipRecord.getBill());
+        intent.putExtra(TipDetailActivity.DATE_KEY, tipRecord.getDateFormatted());
+        startActivity(intent);
     }
 }

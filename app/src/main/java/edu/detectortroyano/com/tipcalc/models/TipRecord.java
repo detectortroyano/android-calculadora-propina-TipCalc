@@ -8,9 +8,9 @@ import java.util.logging.SimpleFormatter;
  * Created by detectortroyano on 12/06/2016.
  */
 public class TipRecord {
-    private Double bill;
+    private double bill;
     private int tipPercentaje;
-    private Date timestap;
+    private Date timestamp;
 
     public Double getBill() {
         return bill;
@@ -29,20 +29,20 @@ public class TipRecord {
     }
 
     public Date getTimestap() {
-        return timestap;
+        return timestamp;
     }
 
     public void setTimestap(Date timestap) {
-        this.timestap = timestap;
+        this.timestamp = timestap;
     }
 
-    public Double getTip(){
+    public double getTip(){
         return bill*(tipPercentaje/100d);
     }
 
     public String getDateFormatted(){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd,yyyy HH:MM");
-        return simpleDateFormat.format(timestap);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd, yyyy HH:mm");
+        return simpleDateFormat.format(timestamp);
     }
 
 }

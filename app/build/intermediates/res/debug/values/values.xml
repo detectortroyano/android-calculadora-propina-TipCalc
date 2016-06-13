@@ -317,6 +317,12 @@
     <!-- From: file:/C:/Users/detectortroyano/AndroidStudioProjects/TipCalc/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <!-- From: file:/C:/Users/detectortroyano/AndroidStudioProjects/TipCalc/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="tipdetail.message.bill">Total %,.1f</string>
+    <string name="title_activity_tip_detail">TipDetailActivity</string>
+    <!-- From: file:/C:/Users/detectortroyano/AndroidStudioProjects/TipCalc/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
