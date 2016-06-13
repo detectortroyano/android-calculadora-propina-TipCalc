@@ -40,7 +40,7 @@ public class TipRecord {
         return bill*(tipPercentaje/100d);
     }
 
-    private String getDateFormatted(){
+    public String getDateFormatted(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd,yyyy HH:MM");
         return simpleDateFormat.format(timestap);
     }
