@@ -3,10 +3,10 @@
     package="edu.detectortroyano.com.tipcalc" >
 
     <application
+        android:name=".TipCalcClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".TipCalcClass"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activities.MainActivity"
@@ -16,6 +16,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.TipDetailActivity"
+            android:label="@string/title_activity_tip_detail" >
         </activity>
     </application>
 
