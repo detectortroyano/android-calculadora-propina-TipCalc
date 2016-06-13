@@ -635,7 +635,7 @@ int id pin 0x7f0c001b
 int id progress_circular 0x7f0c0006
 int id progress_horizontal 0x7f0c0007
 int id radio 0x7f0c0054
-int id reciclerView 0x7f0c007a
+int id recyclerView 0x7f0c007a
 int id right 0x7f0c0023
 int id screen 0x7f0c0027
 int id scroll 0x7f0c0018

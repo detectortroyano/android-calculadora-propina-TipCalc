@@ -42,8 +42,16 @@ public class MainActivity$$ViewBinder<T extends edu.detectortroyano.com.tipcalc.
           target.handleClickDecrease();
         }
       });
-    view = finder.findRequiredView(source, 2131492976, "field 'btnClear'");
+    view = finder.findRequiredView(source, 2131492976, "field 'btnClear' and method 'handleClickClear'");
     target.btnClear = finder.castView(view, 2131492976, "field 'btnClear'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.handleClickClear();
+        }
+      });
     view = finder.findRequiredView(source, 2131492978, "field 'txtTip'");
     target.txtTip = finder.castView(view, 2131492978, "field 'txtTip'");
   }

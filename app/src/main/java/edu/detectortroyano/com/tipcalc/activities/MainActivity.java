@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Date;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,6 +23,7 @@ import edu.detectortroyano.com.tipcalc.R;
 import edu.detectortroyano.com.tipcalc.TipCalcClass;
 import edu.detectortroyano.com.tipcalc.fragments.TipHistoryListFragment;
 import edu.detectortroyano.com.tipcalc.fragments.TipHistoryListFragmentListener;
+import edu.detectortroyano.com.tipcalc.models.TipRecord;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -87,10 +90,18 @@ public class MainActivity extends AppCompatActivity{
         if (!strInputTotal.isEmpty()){
             double total = Double.parseDouble(strInputTotal);
             int tipPercentaje = getTipPercentaje();
+
+            TipRecord tipRecord = new TipRecord();
+            tipRecord.setBill(total);
+            tipRecord.setTipPercentaje(tipPercentaje);
+            tipRecord.setTimestap(new Date());
+
             double tip = total * (tipPercentaje/100d);
 
-            String strTip = String.format(getString(R.string.global_message_tip), tip);
-            fragmentListener.action(strTip);
+            String strTip = String.format(getString(R.string.global_message_tip),
+                    tipRecord.getTip());
+            //fragmentListener.action(strTip);
+            fragmentListener.addToList(tipRecord);
             txtTip.setVisibility(View.VISIBLE);
             txtTip.setText(strTip);
         }
@@ -108,6 +119,12 @@ public class MainActivity extends AppCompatActivity{
         //Log.e(getLocalClassName(), "Click en submit");
         hideKeyboard();
         handleTipChange(-TIP_STEP_CHANGE);
+    }
+
+    @OnClick(R.id.btnClear)
+    public void handleClickClear() {
+        //Log.e(getLocalClassName(), "Click en submit");
+        fragmentListener.clearList();
     }
 
     public void handleTipChange(int change) {

@@ -2281,7 +2281,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0c0006;
         public static final int progress_horizontal=0x7f0c0007;
         public static final int radio=0x7f0c0054;
-        public static final int reciclerView=0x7f0c007a;
+        public static final int recyclerView=0x7f0c007a;
         public static final int right=0x7f0c0023;
         public static final int screen=0x7f0c0027;
         public static final int scroll=0x7f0c0018;
